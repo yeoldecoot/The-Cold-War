@@ -2,68 +2,19 @@
 <html>
 <title>Cold War</title>
 <head>
-  <script language="javascript">
-    
-<script>
-
-　
-
-// Select fade-effect below:
-
-// Set 1 if the background may fade from dark to medium 
-
-// Set 2 if the background may fade from light to medium 
-
-// Set 3 if the background may fade from very dark to very light light
-
-// Set 4 if the background may fade from light to very light
-
-// Set 5 if the background may fade from dark to very dark 
-
+  <script language="javascript">    
 var fade_effect=3
-
-　
-
-// What type of gradient should be applied Internet Explorer 5x or higher?
-
-// Set "none" or "horizontal" or "vertical"
-
 var gradient_effect="horizontal"
-
-　
-
-// Speed higher=slower
-
-var speed=60
-
-　
-
-///////////////////////////////////////////////////////////////////////////
-
-// CONFIGURATION ENDS HERE
-
-///////////////////////////////////////////////////////////////////////////
-
-　
-
+var speed=1
 var browserinfos=navigator.userAgent 
-
 var ie4=document.all&&!document.getElementById
-
 var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
-
 var ns4=document.layers
-
 var ns6=document.getElementById&&!document.all
-
 var opera=browserinfos.match(/Opera/)  
-
 var browserok=ie4||ie5||ns4||ns6||opera
-
-　
-
 if (fade_effect==1) {
-
+	
 	var darkmax=1
 
 	var lightmax=127
