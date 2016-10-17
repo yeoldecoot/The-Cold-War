@@ -1,301 +1,947 @@
-<!DOCTYPEhtml>
-<html>
-<title>Cold War</title>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 <head>
-  <script language="javascript">    
-var fade_effect=3
-var gradient_effect="horizontal"
-var speed=1
-var browserinfos=navigator.userAgent 
-var ie4=document.all&&!document.getElementById
-var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
-var ns4=document.layers
-var ns6=document.getElementById&&!document.all
-var opera=browserinfos.match(/Opera/)  
-var browserok=ie4||ie5||ns4||ns6||opera
-if (fade_effect==30) {
-	
-	var darkmax=1
-
-	var lightmax=127
-
-}
-
-if (fade_effect==2) {
-
-	var darkmax=127
-
-	var lightmax=254
-
-}
-
-if (fade_effect==3) {
-
-	var darkmax=1
-
-	var lightmax=254
-
-}
-
-if (fade_effect==4) {
-
-	var darkmax=190
-
-	var lightmax=254
-
-}
-
-if (fade_effect==5) {
-
-	var darkmax=1
-
-	var lightmax=80
-
-}
-
-var hexc = new Array('0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F')
-
-　
-
-var newred
-
-var newgreen
-
-var newblue
-
-var oldred
-
-var oldgreen
-
-var oldblue
-
-　
-
-var redcol_1
-
-var redcol_2 
-
-var greencol_1 
-
-var greencol_2 
-
-var bluecol_1 
-
-var bluecol_2 
-
-var oldcolor
-
-var newcolor
-
-var firsttime=true
-
- 
-
-var stepred=1
-
-var stepgreen=1
-
-var stepblue=1
-
-　
-
-function setrandomcolor() {
-
-	var range=(lightmax-darkmax)
-
-	if (firsttime) {
-
-		newred=Math.ceil(range*Math.random())+darkmax
-
-		newgreen=Math.ceil(range*Math.random())+darkmax
-
-		newblue=Math.ceil(range*Math.random())+darkmax
-
-		firsttime=false
-
-	}
-
-	
-
-	oldred=Math.ceil(range*Math.random())+darkmax
-
-	oldgreen=Math.ceil(range*Math.random())+darkmax
-
-	oldblue=Math.ceil(range*Math.random())+darkmax
-
-	
-
-	stepred=newred-oldred
-
-	if (oldred>newred) {stepred=1}
-
-	else if (oldred<newred) {stepred=-1}
-
-	else {stepred=0}
-
-	
-
-	stepgreen=newgreen-oldgreen
-
-	if (oldgreen>newgreen) {stepgreen=1}
-
-	else if (oldgreen<newgreen) {stepgreen=-1}
-
-	else {stepgreen=0}
-
-	
-
-	stepblue=newblue-oldblue
-
-	if (oldblue>newblue) {stepblue=1}
-
-	else if (oldblue<newblue) {stepblue=-1}
-
-	else {stepblue=0}
-
-	fadebg()
-
-}
-
-　
-
-function fadebg() {
-
-	if (newred==oldred) {stepred=0}
-
-	if (newgreen==oldgreen) {stepgreen=0}
-
-	if (newblue==oldblue) {stepblue=0}
-
-	newred+=stepred
-
-	newgreen+=stepgreen
-
-	newblue+=stepblue
-
-	
-
-	if (stepred!=0 || stepgreen!=0 || stepblue!=0) {
-
-      	redcol_1 = hexc[Math.floor(newred/16)];
-
-     	redcol_2 = hexc[newred%16];
-
-	 	greencol_1 = hexc[Math.floor(newgreen/16)];
-
-      	greencol_2 = hexc[newgreen%16];
-
-	  	bluecol_1 = hexc[Math.floor(newblue/16)];
-
-      	bluecol_2 = hexc[newblue%16];
-
-	  	newcolor="#"+redcol_1+redcol_2+greencol_1+greencol_2+bluecol_1+bluecol_2
-
-		if (ie5 && gradient_effect!="none") {
-
-			if (gradient_effect=="horizontal") {gradient_effect=1}
-
-			if (gradient_effect=="vertical") {gradient_effect=0}
-
-      		greencol_1 = hexc[Math.floor(newred/16)];
-
-     		greencol_2 = hexc[newred%16];
-
-	 		bluecol_1 = hexc[Math.floor(newgreen/16)];
-
-      		bluecol_2 = hexc[newgreen%16];
-
-	  		redcol_1 = hexc[Math.floor(newblue/16)];
-
-      		redcol_2 = hexc[newblue%16];
-
-			var newcolorCompl="#"+redcol_1+redcol_2+greencol_1+greencol_2+bluecol_1+bluecol_2
-
-			document.body.style.filter=
-
-"progid:DXImageTransform.Microsoft.Gradient(startColorstr="+newcolorCompl+", endColorstr="+newcolor+" GradientType="+gradient_effect+")"
-
-		}
-
-		else {
-
-	  		document.bgColor=newcolor 
-
-		}
-
-		var timer=setTimeout("fadebg()",speed);
-
-    } 
-
-  	else {
-
-  		clearTimeout(timer)
-
-		newred=oldred
-
-		newgreen=oldgreen
-
-		newblue=oldblue
-
-		oldcolor=newcolor
-
-		setrandomcolor()
-
-  	}
-
-}
-
-　
-
-if (browserok) {
-
-	window.onload=setrandomcolor
-
-}
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fantastic Clean Website Designs for Inspiration. Selection of Awwwards winning clean websites or websites with a strong use of clean design. It is usually associated with concepts and emotions such as elegance.">
+        
+                    <meta property="og:image" content="http://www.awwwards.com/bundles/tvawwwards/images/logo-medium.png" />
+        <meta name="twitter:image" content="http://www.awwwards.com/bundles/tvawwwards/images/logo-medium.png">
+                <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@awwwards">
+        <meta name="twitter:creator" content="@awwwards">
+                <meta name="twitter:url" content="http://www.awwwards.com/websites/clean/">
+                <meta name="twitter:title" content="Best Clean Websites | Web Design Inspiration">
+        <meta name="twitter:description" content="Fantastic Clean Website Designs for Inspiration. Selection of Awwwards winning clean websites or websites with a strong use of clean design. It is usually associated with concepts and emotions such as elegance.">
+        <title>Best Clean Websites | Web Design Inspiration</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="/bundles/tvweb/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/bundles/tvweb/css/jquery.fancybox.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.awwwards.com/favicon.ico">
+        
+            <link rel="stylesheet" type="text/css" media="screen" href="/css/7531339.css" />
+      </head>
+
+  <body class="">
+                       <header id="header">
+                    
+
+<nav class="top">
+
+            <strong class="slogan">The awards for design, creativity and innovation on the Internet</strong>
+    
+    <ul class="right">
+                    <li class="login">Are you a member? <a href="/login">Register / Login</a></li>
+            </ul>
+</nav>
+
+
+<nav class="main">
+    <div class="logo">
+        <strong><a href="/" title="Awwwards : Best websites around the World">Awwwards</a></strong>
+    </div>
+    <ul class="menu right">
+        <li><a href="/">Home</a></li>
+        <li class="active"><a href="/awards-of-the-day/">Winners</a></li>
+        <li><a href="/nominees/">Nominees</a></li>
+        <li><a href="/directory/">Directory</a></li>
+        <li><a href="/shop/">Shop</a></li>
+        <li><a href="/jobs/">Jobs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about-us/">About us</a></li>
+        <li class="submit">
+            <a href="/submit/" class="bold">Submit Your Site</a>
+        </li>
+        <li class="search">
+            <span class="bt-search"></span>
+        </li>
+    </ul>
+    <div class="search-text">
+                <form id="search-text" method="get" action="/search-websites/">
+            <input type="text" name="text" class="text" />
+            <button type="submit" name="submit" class="bt-search"></button>
+            <ul>
+                <li><strong>Search in</strong></li>
+                <li>
+                    <input data-url="/websites/" type="radio" name="search-section" id="search-websites" checked />
+                    <label for="search-websites">Websites</label>
+                </li>
+                <li>
+                    <input data-url="/directory/search/" type="radio" name="search-section" id="search-users" />
+                    <label for="search-users">Users</label>
+                </li>
+                <li>
+                    <input data-url="/directory/search/" type="radio" name="search-section" id="search-blog" />
+                    <label for="search-blog">Blog</label>
+                </li>
+            </ul>
+        </form>
+    </div>
+</nav>
+
+                <nav class="search open visible">
+    <div class="left">
+        <ul class="menu">
+            <li class="dropdown active" data-filter="section">
+                <span>
+                                                                                            Site of The Day                                                                                                            </span>
+            </li>
+                                    <li class="dropdown" data-filter="category">
+                <span>Category</span>
+            </li>
+                                    <li class="dropdown active" data-filter="tag">
+                <span>Clean</span>
+            </li>
+                                    <li class="dropdown" data-filter="color">
+                <span>Color</span>
+            </li>
+                        <li class="dropdown" data-filter="country">
+                <span>Country</span>
+            </li>
+        </ul>
+    </div>
+                                <div class="right">
+        <ul class="menu2">
+            <li class="devices">
+                <span class="colsgrid col2 active" data-columns="2"><em>2 columns</em></span>
+                <span class="colsgrid col3" data-columns="3"><em>3 columns</em></span>
+                <a href="/honorable-mentions/" class="desktop active">Desktop</a>
+                <a href="/mobile-web-design/" class="mobile ">Mobile</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+        <nav class="nav-filters" id="nav-filters">
+
+    <div class="filter filter-section list-tags">
+        <ul>
+                                            <li><strong><a href="/websites/?categories=clean&amp;type=nominees" data-count="8566">Nominees</a></strong></li>
+                <li><strong><a href="/websites/?categories=clean&amp;type=honorable" data-count="2846">Honorable Mentions</a></strong></li>
+                <li><strong><a class="active" href="/websites/?categories=clean&amp;type=sites_of_the_day" data-count="764">Site of the Day</a></strong></li>
+                <li><strong><a href="/websites/?categories=clean&amp;type=sites_of_the_month" data-count="19">Site of the Month</a></strong></li>
+                <li><strong><a href="/websites/?categories=clean&amp;type=trending" data-count="64">Trending sites</a></strong></li>
+                        <li><strong><a href="/winner-list/">Winners List</a></strong></li>
+        </ul>
+    </div>
+
+    
+        <div class="filter filter-category list-tags">
+        <ul>
+                                                                                <li><strong><a href="/websites/?categories=clean%2Cweb-interactive" data-count="246">Web &amp; Interactive </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/?categories=clean%2Cdesign-agencies" data-count="167">Design Agencies </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cbusiness-corporate" data-count="100">Business &amp; Corporate </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cpromotional" data-count="78">Promotional </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/?categories=clean%2Cfashion" data-count="75">Fashion </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/?categories=clean%2Ce-commerce" data-count="62">E-Commerce </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cart-illustration" data-count="47">Art &amp; Illustration </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cfilm-tv" data-count="47">Film &amp; TV </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Ctechnology" data-count="43">Technology </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cmusic-sound" data-count="38">Music &amp; Sound </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cculture-education" data-count="35">Culture &amp; Education </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cmobile-apps" data-count="33">Mobile &amp; Apps </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/?categories=clean%2Carchitecture" data-count="32">Architecture </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cother" data-count="32">Other </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Csports" data-count="32">Sports </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cfood-drink" data-count="23">Food &amp; Drink </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cgames-entertainment" data-count="20">Games &amp; Entertainment </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cinstitutions" data-count="19">Institutions </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/?categories=clean%2Cblogging" data-count="14">Blogging </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/?categories=clean%2Chotel-restaurant" data-count="11">Hotel / Restaurant </a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean%2Cevents" data-count="10">Events </a></strong></li>
+                                        <li class="popular"><span>(*)</span> Popular</li>
+        </ul>
+    </div>
+
+    <div class="filter filter-tag list-tags">
+        <ul>
+                                                                                <li><strong><a href="/websites/html5/" data-count="843">HTML5 </a></strong></li>
+                                                                <li><strong><a class="active-close" href="/websites/" data-count="764">Clean </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/animation/" data-count="698">Animation </a></strong></li>
+                                                                                    <li><strong><a href="/websites/css3/" data-count="654">CSS3 </a></strong></li>
+                                                                                    <li><strong><a href="/websites/responsive-design/" data-count="622">Responsive Design </a></strong></li>
+                                                                                    <li><strong><a href="/websites/design/" data-count="565">Design </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/fullscreen/" data-count="445">Fullscreen </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/minimal/" data-count="414">Minimal </a></strong></li>
+                                                                                    <li><strong><a href="/websites/jquery/" data-count="373">jQuery </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/video/" data-count="360">Video </a></strong></li>
+                                                                                    <li><strong><a href="/websites/typography/" data-count="353">Typography </a></strong></li>
+                                                                                    <li><strong><a href="/websites/big-background-images/" data-count="338">Big Background Images </a></strong></li>
+                                                                                    <li><strong><a href="/websites/unusual-navigation/" data-count="326">Unusual Navigation </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/portfolio/" data-count="324">Portfolio </a></strong></li>
+                                                                                    <li><strong><a href="/websites/colorful/" data-count="262">Colorful </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/photography-sites/" data-count="246">Photography </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/single-page/" data-count="240">Single page </a></strong></li>
+                                                                                    <li><strong><a href="/websites/infinite-scroll/" data-count="222">Infinite Scroll </a></strong></li>
+                                                                                    <li><strong><a href="/websites/flexible/" data-count="205">Flexible </a></strong></li>
+                                                                                    <li><strong><a href="/websites/parallax/" data-count="200">Parallax </a></strong></li>
+                                                                                    <li><strong><a href="/websites/graphic-design/" data-count="197">Graphic design </a></strong></li>
+                                                                                    <li><strong><a class="popular" href="/websites/webgl/" data-count="192">WebGL </a></strong></li>
+                                                                                    <li><strong><a href="/websites/scroll/" data-count="189">Scroll </a></strong></li>
+                                                                                    <li><strong><a href="/websites/flat-design/" data-count="125">Flat Design </a></strong></li>
+                                                                                    <li><strong><a href="/websites/wordpress/" data-count="124">Wordpress </a></strong></li>
+                                                                                    <li><strong><a href="/websites/bright/" data-count="116">Bright </a></strong></li>
+                                                                                    <li><strong><a href="/websites/navigation/" data-count="116">Navigation </a></strong></li>
+                                                                                    <li><strong><a href="/websites/trend/" data-count="107">Trend </a></strong></li>
+                                                                                    <li><strong><a href="/websites/social-media/" data-count="106">Social Media </a></strong></li>
+                                                                                    <li><strong><a href="/websites/texture/" data-count="93">Texture </a></strong></li>
+                                                                                    <li><strong><a href="/websites/icons/" data-count="82">Icons </a></strong></li>
+                                                                                    <li><strong><a href="/websites/svg/" data-count="70">SVG </a></strong></li>
+                                                                                    <li><strong><a href="/websites/ecommerce/" data-count="57">E-Commerce </a></strong></li>
+                                                                                    <li><strong><a href="/websites/retro/" data-count="55">Retro </a></strong></li>
+                                                                                    <li><strong><a href="/websites/wordpress/" data-count="45">Wordpress </a></strong></li>
+                                                                                    <li><strong><a href="/websites/vector/" data-count="45">Vector </a></strong></li>
+                                                                                    <li><strong><a href="/websites/app-style/" data-count="29">App Style </a></strong></li>
+                                                                                    <li><strong><a href="/websites/web-fonts/" data-count="19">Web Fonts </a></strong></li>
+                                                                                    <li><strong><a href="/websites/horizontal-layout/" data-count="17">Horizontal Layout </a></strong></li>
+                                                                                    <li><strong><a href="/websites/drupal/" data-count="16">Drupal </a></strong></li>
+                                                                                    <li><strong><a href="/websites/css-framework/" data-count="11">CSS Framework </a></strong></li>
+                                                                                    <li><strong><a href="/websites/websocket/" data-count="11">WebSocket </a></strong></li>
+                                                                                    <li><strong><a href="/websites/seo-1/" data-count="5">SEO </a></strong></li>
+                                        <li class="popular"><span>(*)</span> Popular</li>
+        </ul>
+    </div>
+
+    <div class="filter filter-country list-tags">
+        <ul>
+                                                                                <li><strong><a href="/websites/?categories=clean&amp;countries=U.S.A." data-count="224">U.S.A.</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=United+Kingdom" data-count="101">United Kingdom</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=France" data-count="92">France</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Netherlands" data-count="40">Netherlands</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Canada" data-count="35">Canada</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Italy" data-count="31">Italy</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Germany" data-count="25">Germany</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Denmark" data-count="24">Denmark</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Australia" data-count="20">Australia</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Norway" data-count="15">Norway</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Austria" data-count="14">Austria</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Switzerland" data-count="14">Switzerland</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Poland" data-count="14">Poland</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Spain" data-count="13">Spain</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Sweden" data-count="13">Sweden</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Portugal" data-count="10">Portugal</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Belgium" data-count="9">Belgium</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Brazil" data-count="6">Brazil</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Czech+Republic" data-count="5">Czech Republic</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=New+Zealand" data-count="5">New Zealand</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Serbia" data-count="5">Serbia</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Croatia" data-count="4">Croatia</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Russia" data-count="4">Russia</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=China" data-count="3">China</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Finland" data-count="3">Finland</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Greece" data-count="3">Greece</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Japan" data-count="3">Japan</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Mexico" data-count="3">Mexico</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Ukraine" data-count="3">Ukraine</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Singapore" data-count="2">Singapore</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Slovakia" data-count="2">Slovakia</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=United+Arab+Emirates" data-count="1">United Arab Emirates</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Argentina" data-count="1">Argentina</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Colombia" data-count="1">Colombia</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Georgia" data-count="1">Georgia</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Israel" data-count="1">Israel</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=India" data-count="1">India</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Lithuania" data-count="1">Lithuania</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Romania" data-count="1">Romania</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Slovenia" data-count="1">Slovenia</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=Turkey" data-count="1">Turkey</a></strong></li>
+                                                                                    <li><strong><a href="/websites/?categories=clean&amp;countries=South+Africa" data-count="1">South Africa</a></strong></li>
+                                    </ul>
+        <p class="order-list js-order-az" data-list="filter-country">Show all countries in alphabetical order</p>
+    </div>
+
+    <div class="filter filter-color list-tags">
+        <ul>
+                                                                                <li class="white"><strong><a href="/websites/?categories=clean%2Cwhite" data-count="465">White </a></strong></li>
+                                                                                    <li class="black"><strong><a href="/websites/?categories=clean%2Cblack" data-count="376">Black </a></strong></li>
+                                                                                    <li class="silver"><strong><a href="/websites/?categories=clean%2Csilver" data-count="239">Silver </a></strong></li>
+                                                                                    <li class="blue"><strong><a href="/websites/?categories=clean%2Cblue" data-count="138">Blue </a></strong></li>
+                                                                                    <li class="red"><strong><a href="/websites/?categories=clean%2Cred" data-count="100">Red </a></strong></li>
+                                                                                    <li class="green"><strong><a href="/websites/?categories=clean%2Cgreen" data-count="96">Green </a></strong></li>
+                                                                                    <li class="yellow"><strong><a href="/websites/?categories=clean%2Cyellow" data-count="87">Yellow </a></strong></li>
+                                                                                    <li class="brown"><strong><a href="/websites/?categories=clean%2Cbrown" data-count="51">Brown </a></strong></li>
+                                                                                    <li class="orange"><strong><a href="/websites/?categories=clean%2Corange" data-count="48">Orange </a></strong></li>
+                                                                                    <li class="pink"><strong><a href="/websites/?categories=clean%2Cpink" data-count="36">Pink </a></strong></li>
+                                    </ul>
+    </div>
+</nav>
+
+        <div id="menu-mobile"></div>
+        <div class="box-overlay"></div>
+    </header>
+   
+<section id="content">
+    <div class="block last">
+        <div class="inner">
+                                                             <div class="head-title style2">
+                     <div class="left">
+                        <h1 class="bold">Clean websites</h1>
+                        White space is key in clean websites
+                                                <strong class="open-tag">Read more</strong>
+                                            </div>
+                    <div class="right">
+                        <div class="nav">
+                            <em>764</em> Results for <strong>'Clean websites'</strong>
+                        </div>
+                    </div>
+                    <div class="tag-info">
+                        <p><strong>Cleanness is essential for a good web design</strong>. People often mistake cleanness for minimalism. While both styles have common traits, do not be confused. They are not the same. Minimal design is more about using the bare essentials - less is more. Clean design focuses on the careful and precise positioning of the important elements throughout the site - a place for everything and everything in its place. The website can be considered quite busy with lots of elements to consider, but as long as the design is kept clean, the website will work. Clean website design conveys elegance.</p>
+                    </div>
+                </div>
+                                        <ul class="grid list-item submits col-2">
+                                                                                <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/thieb-portfolio"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/10/57f51586d40c5.jpeg" alt="Thieb - Portfolio | CSS Website" /></a>
+            <a href="http://www.thieb.co/" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/thieb-portfolio">Thieb - Portfolio</a></h3>
+         <div class="add-like open_login new"  id="like_25911" data-url="/login_ajax" data-vote="/submission/thieb-portfolio/like" data-id="25911">
+          <span class="total">60</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/Thieb/">Thieb</a></strong>   from <strong>France</strong> with <strong>7.36</strong>
+    </div>
+
+    <div class="row">
+        October 06, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/sparkbit"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/10/57f4d263c7d01.png" alt="Sparkbit | CSS Website" /></a>
+            <a href="http://www.sparkbit.pl" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/sparkbit">Sparkbit</a></h3>
+         <div class="add-like open_login new"  id="like_25905" data-url="/login_ajax" data-vote="/submission/sparkbit/like" data-id="25905">
+          <span class="total">36</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/balsamstudio/">balsamstudio</a></strong>   from <strong>Poland</strong> with <strong>7.02</strong>
+    </div>
+
+    <div class="row">
+        October 05, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/annie"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57ee3f8db2f73.jpeg" alt="ANNIE | CSS Website" /></a>
+            <a href="http://www.anniecollections.com" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/annie">ANNIE</a></h3>
+         <div class="add-like open_login new"  id="like_25835" data-url="/login_ajax" data-vote="/submission/annie/like" data-id="25835">
+          <span class="total">60</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/awdagency/">Awd Agency</a></strong>   from <strong>Italy</strong> with <strong>7.42</strong>
+    </div>
+
+    <div class="row">
+        September 30, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/riccardo-zanutta-interactive-frontend-developer"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57ee3f50251ee.png" alt="Riccardo Zanutta - Interactive Frontend Developer | CSS Website" /></a>
+            <a href="http://riccardozanutta.com" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/riccardo-zanutta-interactive-frontend-developer">Riccardo Zanutta - Interactive Frontend Developer</a></h3>
+         <div class="add-like open_login new"  id="like_25833" data-url="/login_ajax" data-vote="/submission/riccardo-zanutta-interactive-frontend-developer/like" data-id="25833">
+          <span class="total">68</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/riccardozanutta/">Riccardo Zanutta</a></strong>   from <strong>Italy</strong> with <strong>7.19</strong>
+    </div>
+
+    <div class="row">
+        September 30, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/cold-press-juice"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57ea87335bfe3.jpeg" alt="Cold Press Juice | CSS Website" /></a>
+            <a href="http://www.cpj.co.uk" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/cold-press-juice">Cold Press Juice</a></h3>
+         <div class="add-like open_login new"  id="like_25782" data-url="/login_ajax" data-vote="/submission/cold-press-juice/like" data-id="25782">
+          <span class="total">66</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/Impero/">Impero</a></strong>   from <strong>United Kingdom</strong> with <strong>7.18</strong>
+    </div>
+
+    <div class="row">
+        September 27, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/project-sunday-furniture"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57ec5066ed860.jpeg" alt="Project Sunday | CSS Website" /></a>
+            <a href="http://Projectsunday.net" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/project-sunday-furniture">Project Sunday</a></h3>
+         <div class="add-like open_login new"  id="like_25813" data-url="/login_ajax" data-vote="/submission/project-sunday-furniture/like" data-id="25813">
+          <span class="total">93</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/SuperTopSecret/">Super Top Secret</a></strong>   from <strong>U.S.A.</strong> with <strong>7.59</strong>
+    </div>
+
+    <div class="row">
+        September 29, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/rsq-1"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57e14f7c91fa3.jpeg" alt="RSQ | CSS Website" /></a>
+            <a href="http://www.rsq.com" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/rsq-1">RSQ</a></h3>
+         <div class="add-like open_login new"  id="like_25676" data-url="/login_ajax" data-vote="/submission/rsq-1/like" data-id="25676">
+          <span class="total">38</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/RSQsays/">RSQ</a></strong>   from <strong>U.S.A.</strong> with <strong>7.01</strong>
+    </div>
+
+    <div class="row">
+        September 21, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/melville-design"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57e404b41d920.jpeg" alt="Melville | CSS Website" /></a>
+            <a href="http://melville-design.com" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/melville-design">Melville</a></h3>
+         <div class="add-like open_login new"  id="like_25715" data-url="/login_ajax" data-vote="/submission/melville-design/like" data-id="25715">
+          <span class="total">106</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/Waaark/">Waaark</a></strong>   from <strong>France</strong> with <strong>7.59</strong>
+    </div>
+
+    <div class="row">
+        September 23, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/filippo-bello"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57cd7fc8160b3.jpeg" alt="Filippo Bello | CSS Website" /></a>
+            <a href="http://www.filippobello.com/en/" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/filippo-bello">Filippo Bello</a></h3>
+         <div class="add-like open_login new"  id="like_25450" data-url="/login_ajax" data-vote="/submission/filippo-bello/like" data-id="25450">
+          <span class="total">79</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/adoratorio/">Adoratorio</a></strong>   from <strong>Italy</strong> with <strong>7.23</strong>
+    </div>
+
+    <div class="row">
+        September 06, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/labyrinth-club-belgium"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57d146a128243.jpeg" alt="Labyrinth club Belgium | CSS Website" /></a>
+            <a href="http://labyrinthclub.be" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/labyrinth-club-belgium">Labyrinth club Belgium</a></h3>
+         <div class="add-like open_login new"  id="like_25495" data-url="/login_ajax" data-vote="/submission/labyrinth-club-belgium/like" data-id="25495">
+          <span class="total">36</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/gewest13/">Gewest13</a></strong>   from <strong>Netherlands</strong> with <strong>7.20</strong>
+    </div>
+
+    <div class="row">
+        September 08, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/sean-klassen"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/08/57c5f446ae663.jpeg" alt="Sean Klassen | CSS Website" /></a>
+            <a href="http://seanjklassen.com" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/sean-klassen">Sean Klassen</a></h3>
+         <div class="add-like open_login new"  id="like_25393" data-url="/login_ajax" data-vote="/submission/sean-klassen/like" data-id="25393">
+          <span class="total">59</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/seanklassen/">Sean Klassen</a></strong>   from <strong>U.S.A.</strong> with <strong>7.21</strong>
+    </div>
+
+    <div class="row">
+        August 31, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                                                                    <li class="col n-6">
+        <figure class="rollover site">
+            <a href="/sites/maison-ullens"><img width="700" height="500" src="http://www.awwwards.com/media/cache/thumb_sotm/awards/submissions/2016/09/57d81ec2a1bbf.jpg" alt="Maison Ullens | CSS Website" /></a>
+            <a href="http://maisonullens.com" target="_blank" class="bt-url">VISIT SITE</a>
+        </figure>
+        <div class="info">
+            <h3 class="bold"><a href="/sites/maison-ullens">Maison Ullens</a></h3>
+         <div class="add-like open_login new"  id="like_25449" data-url="/login_ajax" data-vote="/submission/maison-ullens/like" data-id="25449">
+          <span class="total">127</span>
+      </div>
+
+    <div class="row">
+        By <strong><a href="/weareperiod/">Period • Digital</a></strong>   from <strong>France</strong> with <strong>7.48</strong>
+    </div>
+
+    <div class="row">
+        September 06, 2016
+                    in <strong><a href="/awards-of-the-day/">SOTD</a></strong>
+                                    </div>
+</div>
+
+    </li>
+
+                         </ul>
+                         <div class="paginate grid">
+    <div class="col n-6">
+        
+                                                <span class="current">1</span>
+                                                    <a href="/websites/clean/?page=2">2</a>
+                                                    <a href="/websites/clean/?page=3">3</a>
+                                                    <a href="/websites/clean/?page=4">4</a>
+                                                    <a href="/websites/clean/?page=5">5</a>
+                        </div>
+        <div class="col n-6 more">
+        <a class="bold next" href="/websites/clean/?page=2">SHOW ME MORE</a>
+    </div>
+        </div>
+
+        </div>
+    </div>
+
+    
+<div class="block style2 light" id="block-directory-ad">
+    <div class="inner">
+        <h4 class="heading-h4"><strong class="bold">DIRECTORY</strong> <a href="/directory/">Agencies and Freelancers</a></h4>
+          <ul class="grid list-boxes list-flex one-row">
+            <li class="col n-3">
+        <div class="box-default box-directory">
+            <h3 class="x-bold"><a href="/directory/web-design/">Web Design</a></h3>
+                                    <ul class="list-users">
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/bluefountainmedia/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/74949//5541fe69946dd.jpg" width="80" height="80" alt="Blue Fountain Media"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/aquest/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/221/540de1adca103.jpeg" width="80" height="80" alt="AQuest"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/uzik/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/194//5620c90d8482f.jpeg" width="80" height="80" alt="UZIK"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/fcinq/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/244/fcinq-avatwitter-SALUTLESTWITTOS.jpg" width="80" height="80" alt="FCINQ"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/dogstudio/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/241//54ff221041802.jpeg" width="80" height="80" alt="dogstudio"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/huncwot/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/16835/50eeb4d45fa22.jpeg" width="80" height="80" alt="Huncwot"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/epic/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/190//5540f961743ad.jpeg" width="80" height="80" alt="EPIC Agency"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/HuemorDesigns/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/80809/514385dbea713.jpeg" width="80" height="80" alt="Huemor"></a>
+                    </figure>
+                </li>
+                            </ul>
+            <p><a href="/directory/web-design/" class="link-underline">Search this category</a></p>
+        </div>
+    </li>
+            <li class="col n-3">
+        <div class="box-default box-directory">
+            <h3 class="x-bold"><a href="/directory/web-development/">Web Development</a></h3>
+                                    <ul class="list-users">
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/adoratorio/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/196723//570fc1c7387d5.jpeg" width="80" height="80" alt="Adoratorio"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/hook/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/73782//5654e74a59355.png" width="80" height="80" alt="Hook"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/BigDropInc/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/186218//54e78435b9dd7.png" width="80" height="80" alt="Big Drop Inc"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/socialrise/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/394839//56d5850d3fae4.jpeg" width="80" height="80" alt="socialrise"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/crafted/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/310909//54ef5fb7e9fbb.png" width="80" height="80" alt="Crafted"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/loungelizardww-1/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/313366//54f1b7ab596e2.jpeg" width="80" height="80" alt="Lounge Lizard"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/resn/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/65098//55e6275da2ddc.jpeg" width="80" height="80" alt="Resn"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/hellomonday/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/196//547e36f11e834.png" width="80" height="80" alt="Hello Monday"></a>
+                    </figure>
+                </li>
+                            </ul>
+            <p><a href="/directory/web-development/" class="link-underline">Search this category</a></p>
+        </div>
+    </li>
+            <li class="col n-3">
+        <div class="box-default box-directory">
+            <h3 class="x-bold"><a href="/directory/graphic-design/">Graphic Design</a></h3>
+                                    <ul class="list-users">
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/highlights-inc/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/174722//56e1490bb9996.jpeg" width="80" height="80" alt="highlights inc."></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/digitalpod/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/117015//57bd7ccfe7fc4.jpeg" width="80" height="80" alt="DigitalPod"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/hyperakt/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/189/hyperakt_twitter.png" width="80" height="80" alt="Hyperakt"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/artversion/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/79150//56c3390b69785.jpeg" width="80" height="80" alt="artversion"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/aleskrivec/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/51310//54476cb1be174.jpeg" width="80" height="80" alt="aleskrivec"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/binalogue/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/236//55002f922e5f9.png" width="80" height="80" alt="Binalogue"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/buildinamsterdam/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/60229//574c06250d056.jpeg" width="80" height="80" alt="Build in Amsterdam"></a>
+                    </figure>
+                </li>
+                                                <li>
+                    <figure class="rollover">
+                        <a href="/NRGThemes/"><img src="http://www.awwwards.com/media/cache/thumb_image_directory_80/awards/avatar/264417//56d0a65a88e20.png" width="80" height="80" alt="NRGThemes"></a>
+                    </figure>
+                </li>
+                            </ul>
+            <p><a href="/directory/graphic-design/" class="link-underline">Search this category</a></p>
+        </div>
+    </li>
+        <li class="col n-3">
+            <div class="box-default box-info style2 featured">
+        <h2 class="x-bold color-green">Are you an Agency or a Freelancer?</h2>
+        <p>Join the freshest club on the web, where top designers, art directors & developers come to play.</p>
+        <p><a href="/plans/user-plans" class="button bold">SIGN UP!</a> or <a href="/login" class="link-underline">login</a></p>
+    </div>
+
+    </li>
+</ul>
+
+    </div>
+</div>
+
+
+
+</section>
+       <footer id="footer">
+
+    <div class="box-social">
+        <div class="list-follow">
+            <ul>
+                <li class="twitter">
+                    <a href="http://www.twitter.com/awwwards" target="_blank">Twitter</a>
+                </li>
+                <li class="facebook">
+                    <a href="http://www.facebook.com/awwwards/" target="_blank">Facebook</a>
+                </li>
+                <li class="googleplus">
+                    <a href="https://plus.google.com/+Awwwardscom" target="_blank">Google+</a>
+                </li>
+                <li class="heart"></li>
+                <li class="pinterest">
+                    <a href="http://www.pinterest.com/awwwardscom/" target="_blank">Pinterest</a>
+                </li>
+                <li class="vimeo">
+                    <a href="http://vimeo.com/awwwards" target="_blank">Vimeo</a>
+                </li>
+                <li class="rss">
+                    <a href="http://feeds.feedburner.com/awwwards-sites-of-the-day" target="_blank">RSS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box-featured">
+        <div class="inner grid">
+            <ul class="list-item list-flex">
+                <li class="col n-3">
+                    <div class="box-default style3">
+                        <figure class="rollover">
+                            <a href="http://conference.awwwards.com"><img src="/bundles/tvweb/images/footer/conferences.png" width="186" height="156" alt="Conference and prize-giving" /></a>
+                        </figure>
+                        <div class="info">
+                            <h3 class="bold"><a href="http://conference.awwwards.com">Conference and prize-giving</a></h3>
+                            <div class="row"><a href="http://conference.awwwards.com">Read more</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col n-3">
+                    <div class="box-default style3">
+                        <figure class="rollover">
+                            <a href="/about-certificates/"><img src="/bundles/tvweb/images/footer/certificates.png" width="186" height="156" alt="Certificates and prizes<" /></a>
+                        </figure>
+                        <div class="info">
+                            <h3 class="bold"><a href="/about-certificates/">Certificates and prizes</a></h3>
+                            <div class="row"><a href="/about-certificates/">Read more</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col n-3">
+                    <div class="box-default style3">
+                        <figure class="rollover">
+                            <a href="http://www.awwwards.com/jury/2016/"><img src="/bundles/tvweb/images/footer/jury-3.jpg" width="186" height="156" alt="Jury" /></a>
+                        </figure>
+                        <div class="info">
+                            <h3 class="bold"><a href="http://www.awwwards.com/jury/2016/">Jury 2016</a></h3>
+                            <div class="row"><a href="http://www.awwwards.com/jury/2016/">Read more</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col n-3">
+                    <div class="box-default style3 featured">
+                        <figure class="rollover">
+                            <a href="http://www.wloks.com/?campaign=awwwards&utm_source=awwwards&utm_medium=cpc&utm_content=footer&utm_campaign=sponsorship" rel="nofollow" target="_blank"><img src="/bundles/tvweb/images/footer/wloks.jpg" width="186" height="156" alt="wloks" /></a>
+                        </figure>
+                        <div class="info">
+                            <h3 class="bold"><a href="http://www.wloks.com/?campaign=awwwards&utm_source=awwwards&utm_medium=cpc&utm_content=footer&utm_campaign=sponsorship" rel="nofollow" target="_blank">Mockups, Photos, Icons and more...</a></h3>
+                            <div class="row"><span class="color-green">Official Sponsor</span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>The Aw<span>ww</span>ards that recognize the talent and effort of the best web designers in the World.</h4>
+        </div>
+    </div>
+
+    <nav class="footer">
+        <div class="inner">
+            <div class="left">
+                <div class="copy">© COPYRIGHT 2010-16</div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/about-us/">About us</a></li>
+                    <li><a href="/about-evaluation/">Evaluation System</a></li>
+                    <li><a href="/terms/">Legal terms</a></li>
+                    <li><a href="/contact-us/">Contact us</a></li>
+                    <li><a href="https://awwwards.desk.com/">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</footer>
+
+
+     <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        if (window.location.hash && window.location.hash == '#_=_') {
+            if (window.history && history.pushState) {
+                window.history.pushState("", document.title, window.location.pathname);
+            }
+                    }
+    </script>
+
+            <script src="/js/7c16508.js"></script>
+        <script src="/bundles/fosjsrouting/js/router.js"></script>
+    <script src="/js/routing?callback=fos.Router.setData"></script>
+    <script>
+        AW.menuUrl = 'http://www.awwwards.com/menu_mobile/winners';
+    </script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+             <script type="text/javascript">
+var url_ajax = '/ajax/like_and_vote/';
+$(document).ready(function() {
+     AW.addCountdownNominee();
+      AWB.openLogin();
+ });
 </script>
 
-　
-<center>
-<h1><p>The cold War</p></h1>
-</center>
-</head>
-<body>
-<center>
-<table border="1">
-  <tr>
-    <th>Website Developer</th>
-    <th>Teamates</th>
-  </tr>
-  <tr>
-    <td>Tre Odeen</td>
-    <td>Marcus Rayus, Tre Odeen, Josh Browne, Alex Keretskey, Jackson Gerren</td>
-  </tr>
-</table>
-<center>
-<h1><p>What was the importance of the Cold War?</p></h1>
-</center>
-<center>
-<h5><p>The Cold War was important because it split the world into two rival sides that came into conflict with each other in a number of places around the world.  This conflict has left us with, among other things, a huge aresenal of nuclear weapons, particularly in the US and in Russia.
+    
+    <script src="/bundles/tvweb/js/js.cookie.js"></script>
+    <script>
+    $(document).ready(function() {
+        // OPEN TAG INFO
+        $('.open-tag').click(function() {
+            $('.tag-info').slideToggle();
+        });
 
-The Cold War caused all sorts of conflicts to occur around the world.  Because of the Cold War, we had the Korean War and the Vietnam War.  Because of the Cold War, we had the Bay of Pigs invasion and the Cuban Missile Crisis.  Because of the Cold War, we had the USSR invading Afghanistan and fighting a war there, which helped to create the Taliban and Al Qaeda.  Because of the Cold War, we had the US helping to overthrow some leaders (Moassadeq in Iran) while propping up other regimes (apartheid regime in South Africa, Pinochet in Chile, Marcos in the Philippines) who really abused their people.
+        var columnsSelected = Cookies.get('display-columns');
 
-So, the Cold War was important because it caused these sorts of conflicts and these sorts of actions by the US (and by the Soviet Union as well).</p></h5>
-</center>
-<center>
-<h1><p>The U-2 Spy plane incident</p></h1>
-</center>
-<center>
-<h5><p>An international diplomatic crisis erupted in May 1960 when the USSR (Union of Soviet Socialist Republics) shot down an American U-2 spy plane in Soviet air space and captured its pilot, Francis Gary Powers (1929-77). President Dwight D. Eisenhower (1890-1969) was forced to admit to the Soviets that the U.S. CIA (Central Intelligence Agency) had been flying spy missions over the USSR for several years. The Soviets convicted Powers on espionage charges and sentenced him to 10 years in prison. However, after serving two years, he was released in exchange for a captured Soviet agent in the first-ever U.S. and USSR spy swap. The U-2 spy plane incident raised tensions between the U.S. and the Soviets during the Cold War (1945-1991).</p></h5>
-</center>
-<center>
-<h1><p>Cold War</p></h1>
-<img src="http://www.bbc.co.uk/staticarchive/39a656d0fc2c77f746b3212a31fde2a8e8194450.jpg" alt="Here comes dat boii" style="width:304px;height:228px;">
-<h5><p>The global superpower stand-off that brought the world to the brink of destruction.
-Cold War Season explores the cultural and political impact of a conflict that divided the world.</p></h5>
-</center>
-<h1><p>What are the causes of the Cold War?</p></h1>
-<h5><p>In summary, the Cold War began in 1945 and was a period of tension between the United States and Soviet Union. President Harry Truman fueled the fire by using the atomic bomb as leverage and issuing the Truman Doctrine to fund democracy in third world nations.</p></h5>
-<p></p>
-</body>
+        if (columnsSelected) {
+            var $button = $('.colsgrid[data-columns="'+columnsSelected+'"]');
+
+            displayButtonAndChangeToColumns($button, columnsSelected);
+        }
+
+        /* CHANGE COLUMNS GRID */
+
+        $('.devices').on('click', '.colsgrid', function() {
+
+            var c = $(this).data('columns');
+
+            Cookies.set('display-columns', c, { path: '/' });
+
+            displayButtonAndChangeToColumns($(this), c);
+
+        });
+
+        function displayButtonAndChangeToColumns($button, columns)
+        {
+            if( !$button.hasClass('active')){
+                $('.devices .colsgrid').removeClass('active');
+                $button.addClass('active');
+
+                var n = 12/columns;
+
+                $('#content .list-item').removeClass('col-2 col-3');
+                $('#content .list-item').addClass('col-'+columns);
+
+                $('#content .list-item li').removeClass('n-4 n-6');
+                $('#content .list-item li').addClass('n-'+n);
+            }
+        }
+    });
+    </script>
+
+    <script>
+        dataLayer.push({
+            'section': 'nominees',
+            'subsection': 'search',
+            'title': 'Clean websites'
+        });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PXD9JT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PXD9JT');</script>
+    <!-- End Google Tag Manager -->
+  </body>
 </html>
